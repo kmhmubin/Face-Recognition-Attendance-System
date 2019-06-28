@@ -49,6 +49,22 @@ There is still no work combining image processing by raspbian operating system w
 
 Python, Open CV , Raspbian OS
 
+**Components:**
+
+The total estimated components to complete the project is provided in Table 2.
+
+| Name of Item |
+| --- |
+| HD Webcam ( Camera Module) |
+| Raspberry Pi |
+| SD card |
+| Battery |
+| Wires and Other |
+
+Table 2: Component for the project
+
+
+
 **Time-plan:**
 
 List the deliverables with specific dates so that you can make concerted effort to achieve them.
