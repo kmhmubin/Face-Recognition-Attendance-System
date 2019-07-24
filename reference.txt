@@ -1,0 +1,4 @@
+Installing dlib in ubuntu
+
+https://www.learsudnopencv.com/install-dlib-on-ubuntu/
+
