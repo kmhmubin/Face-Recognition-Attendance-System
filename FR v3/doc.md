@@ -43,7 +43,9 @@ Try to use Virtual Environment to install Python libraries.
 ```
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 
-sudo -H pip3 install -U pip numpy scipy matplotlib scikit-image scikit-learn ipython
+sudo -H pip3 install -U pip numpy scipy matplotlib scikit-image scikit-learn ipython opencv-contrib-python
+
+
 
 ```
 **step 3: Compile DLib**
@@ -73,8 +75,33 @@ sudo -H pip3 install face_recognition
 ```
 
 
+## Virtual Enviroment
+
+First we need to install the virtual evn in our os. 
 
 
+**step 1: Install venv in os**
+```
+sudo pip install virtualenv
+```
 
+Then go to your work folder run the terminal
+
+**step 2:Creating venv in workpath**
+
+```
+mkdir nameofenv
+eg. mkdir venv
+
+cd venv
+virtualenv env1
+
+```
+
+**step 3:Activate Virtual env**
+
+```
+source virtualenv/env1/bin/activate
+```
 
 
