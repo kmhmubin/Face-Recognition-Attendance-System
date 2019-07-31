@@ -1,8 +1,33 @@
-<!-- workthrough documentation -->
-<!-- This documentation only for fr v3 -->
-# Intrducton
+# Face Recognition with deep learning and opencv
 
-In this version we are going to work with dlib lib and face_recognition packages. TO use those packages we need to setup the necessery packages.
+In this project we use the deep machine learning for best result. To get higher accuracy rate in face recognition we use more than 850 picture. Although it not that much big dataset compate to other. But we get what we wanted. our project have now around 90% accuracy rate.
+
+## File Index
+
+In this photo we can see the dirctory list of our project.
+
+[file direcotory list](Document Metarial/Doc Images/frwithdeep dirctorylist.png)
+
+---------------------------------------------------------
+
+## File Directory list details
+
+* **dataset:**  In dataset folder we collect many picture of popular                   actors. We organize the photos by their name.
+* **dlib:** dlib is a c++ library file which help to analysi the face in our project.
+
+* **venv :** virtual enviroment for python. Best to use it.
+* **camera_check.py :** To check the camera working or not.
+* **encode_face.py :** To train the faces and create a pickle object which store all the data about faces.
+* **encodings.pickle :** In this object all the data about faces are store.
+* **recognize_face_video.py :** real time streaming , detection and recognize the faces.
+* **google_image_downloader.py :** to automatice download images from google image search.
+* **search_bing_api :** to download images form bing image search engine automaically.
+
+------------------------------------------------------------
+
+# Install Process
+ 
+we need to install so many packages and library for sucessfully run the file. All the steps are below.
 
 ## What is Dlib Library?
 
@@ -17,14 +42,6 @@ To recognisze and manipulate faces we need to algorithm.We are going to use face
 ## Install Dlib on Ubuntu
 
 The step by step instructions to install Dlib on Ubuntu.Install all the libraries as Admin which  will help to errorless install.
-
-#### System Information
-
-* Ubuntu 18.04 LTS
-* Anaconda 2019.07
-* Python 3.6
-
-
 
 **step 1: Install OS libraries**
 
@@ -106,22 +123,32 @@ source virtualenv/env1/bin/activate
 
 --------------------------------------
 
-# Downloading Images Dataset automatically
+## Downloading Images Dataset automatically
 
 We are going to download our images for our training dataset. To do that,we need to download so many images and it's not easy to download manually and also time consuming. We have a proper solution for this problem. How about we are going to build a script which are going to download images automatically in order and save in a directory with sub-folder. Isn't it a best solution for our problem.So lets make a script.
 
 Before we start building our script there are 2 options. Those are
 
-* [Google API image downloader]()
+* [Google API image downloader](https://google-images-download.readthedocs.io/en/latest/arguments.html)
 * [Bing API images downloader](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/)
 
 Follow Those link to build your own image downloader.
 
----------------------------------------
+## Terminal code to run the python files
 
+* **encode_face.py**
 
+```
+python encode_faces.py --dataset dataset --encodings encodings.pickle
+```
+It will run the encode_face python file and create a data object encodings pickle file.
 
+* **recognize_face_video.py**
+```
+python recognize_faces_video.py --encodings encodings.pickle \
 
+## after show this " > " symbole use this code 
 
-
-
+  --output output/webcam_face_recognition_output.avi --display 1
+```
+It will run the recognize_faces_video python file along with encodings pickle and start webcam and recognize the person in the database.
