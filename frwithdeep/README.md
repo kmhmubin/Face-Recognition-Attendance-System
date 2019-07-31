@@ -6,7 +6,7 @@ In this project we use the deep machine learning for best result. To get higher 
 
 In this photo we can see the dirctory list of our project.
 
-[file direcotory list](Document Metarial/Doc Images/frwithdeep dirctorylist.png)
+![file direcotory list](https://github.com/kmhmubin/Human-Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Doc%20Images/frwithdeep%20dirctorylist.png)
 
 ---------------------------------------------------------
 
