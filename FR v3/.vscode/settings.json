@@ -1,3 +1,11 @@
 {
-    "python.pythonPath": "/home/mubin/anaconda3/envs/fr/bin/python"
+    "python.pythonPath": "/home/mubin/Desktop/Face Recognition/Human-Face-Recognition-Attendance-System/FR v3/virtualenv/env1/bin/python",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/objects/**": true,
+        "**/node_modules/*/**": true
+    },
+    
+
 }
+
