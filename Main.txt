@@ -29,11 +29,12 @@ xdeg = 150
 ydeg = 150
 
 
-  
+  # calling the harr cascade file
 cascadePath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath)
 recognizer=cv2.face.LBPHFaceRecognizer_create()
 log.basicConfig(filename='database.log',level=log.INFO)
+# opening the database file using append mode
 file = open("/home/pi/Testnew/data_log.csv", "a")
 
 
