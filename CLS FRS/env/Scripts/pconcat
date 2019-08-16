@@ -1,0 +1,24 @@
+#!e:\practices\cls frs\env\scripts\python.exe
+import argparse
+import sys
+from jtutils import fix_broken_pipe
+
+def readCL():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("infiles",default=[sys.stdin],nargs="*");
+    args = parser.parse_args()
+    return args.infiles
+
+if __name__ == "__main__":
+    infiles = readCL()
+    fix_broken_pipe()
+    hdr = None
+    for f in infiles:
+        with open(f) as f_in:
+            this_hdr = f_in.readline()
+            if hdr == None:
+                hdr = this_hdr
+                sys.stdout.write(hdr)
+            if (this_hdr != hdr):
+                raise Exception("incompatible headers: " + hdr + "\n" + this_hdr)
+            sys.stdout.write(f_in.read())

@@ -1,0 +1,58 @@
+#!e:\practices\cls frs\env\scripts\python.exe
+import optparse
+import sys
+import itertools
+from six.moves import zip_longest
+
+def readCL():
+    usagestr = "%prog"
+    parser = optparse.OptionParser(usage=usagestr)
+    parser.add_option("-u", "--union", action="store_true")
+    parser.add_option("-i", "--intersection", action="store_true")
+    parser.add_option("-d", "--difference", action="store_true")
+    parser.add_option("-v", "--venn", action="store_true")
+    parser.add_option("-n", "--no_header", action="store_true")
+    options, args = parser.parse_args()
+    assert(len(args) == 2)
+    return options.no_header, options.union, options.intersection, options.difference, options.venn, args[0], args[1]
+
+
+if __name__ == "__main__":
+    no_header, union, intersection, difference, venn, file1, file2 = readCL()
+    s1 = set()
+    s2 = set()
+    hdr = None
+    with open(file1) as fin1:
+        for l in fin1:
+            if not no_header and not hdr:
+                hdr = l
+                continue
+            l = l.strip()
+            s1.add(l)
+
+    hdr = None
+    with open(file2) as fin2:
+        for l in fin2:
+            if not no_header and not hdr:
+                hdr = l
+                continue
+            l = l.strip()
+            s2.add(l)
+    if venn:
+        v1 = s1.difference(s2)
+        v2 = s1.intersection(s2)
+        v3 = s2.difference(s1)
+        csv_rows = zip_longest(v1,v2,v3,fillvalue="")
+        hdr = ','.join(["set1","intersection","set2"])
+        s_out = [hdr] + [','.join([str(f) for f in r]) for r in csv_rows]
+    elif union:
+        s_out = s1.union(s2)
+    elif intersection:
+        s_out = s1.intersection(s2)
+    elif difference:
+        s_out = s1.difference(s2)
+    else:
+        raise
+
+    for l in s_out:
+        sys.stdout.write(l + '\n')
