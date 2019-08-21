@@ -25,7 +25,8 @@ def mainMenu():
     print("[2] Capture Faces")
     print("[3] Train Images")
     print("[4] Recognize Images")
-    print("[5] Quit")
+    print("[5] Auto Mail")
+    print("[6] Quit")
 
     while True:
         try:
@@ -44,6 +45,10 @@ def mainMenu():
                 RecognizeFaces()
                 break
             elif choice == 5:
+                os.system("py automail.py")
+                break
+                mainMenu()
+            elif choice == 6:
                 print("Thank You")
                 break
             else:
