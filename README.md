@@ -1,4 +1,4 @@
-# Human-Face-Recognition-Attendance-System
+# Face-Recognition-Attendance-System
 A system which can recognize face and match with its own database and take the attendance automatic.
 
 **Abstract:**
