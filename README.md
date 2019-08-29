@@ -2,7 +2,7 @@
 
 ### Recognize The faces And Take Automatic Attandance.
 
-![Face Recognition Logo]()
+![Face Recognition Logo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/Face-Recognition-Attendance-System-Logo.jpg)
 
 ## Motivation
 ----------------------------
@@ -17,6 +17,13 @@ We seek to provide a valuable attendance service for both teachers and students.
 * Automatic Email
 
 # Screenshots
+* Command Line Interface
+
+![Command Line Interdace](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/FRAS%20Interface.png)
+
+* Checking Camera
+
+![Checking Camera]()
 
 
 ## Tech Used
@@ -49,10 +56,13 @@ Software Used -
 
 First Download or Clone the Project on Your Local Machine.To download the project from github press **Download Zip**
 
-![Download Zip]()
+![Download Zip](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/download%20zip.png)
 
 or 
 
 You can clone the project with git bash.To clone the project using git bash first open the git bash and write the following code
 ```
-git clone 
+git clone https://github.com/kmhmubin/Face-Recognition-Attendance-System.git
+```
+demo 
+![Git clone](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/git%20clone_edit_0.gif)
