@@ -56,7 +56,7 @@ Software Used -
 * VS CODE 
 * Git
 
-## Installation :setting:
+## Installation :key:
 -----------------------------------
 
 #### Download or Clone the project
