@@ -156,7 +156,7 @@ This project have some bugs.
 
 ## Contribute :heart:
 --------------------------------------
-If you want to contribute in this project feel free to do that. A [contribution guideline]() will be a big help.
+If you want to contribute in this project feel free to do that. A [contribution guideline](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Contributing%20Guidelines.md) will be a big help.
 
 ## Credits :sparkling_heart:
 --------------------------------
