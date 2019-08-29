@@ -19,7 +19,7 @@ We seek to provide a valuable attendance service for both teachers and students.
 ## Screenshots
 ### Command Line Interface
 
-![Command Line Interdace](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/FRAS%20Interface.png)
+![Command Line Interdace](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/CODE%20INTERFACE.png)
 
 ### Checking Camera
 
