@@ -8,7 +8,7 @@
 ----------------------------
 We seek to provide a valuable attendance service for both teachers and students. Reduce manual process errors by provide automated and a reliable attendance system uses face recognition technology.
 
-## Features
+## Features :clipboard:
 ---------------------------
 * Check Camera
 * Capture Faces
@@ -16,7 +16,7 @@ We seek to provide a valuable attendance service for both teachers and students.
 * Recognize Faces & Attendance
 * Automatic Email
 
-## Screenshots
+## Screenshots :camera:
 ### Command Line Interface
 
 ![Command Line Interdace](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/CODE%20INTERFACE.png)
@@ -30,7 +30,7 @@ We seek to provide a valuable attendance service for both teachers and students.
 ![Automail](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/automail.jpg)
 
 
-## Tech Used
+## Tech Used :computer:
 --------------------------
 Build With - 
 * Python 3.7
@@ -56,7 +56,7 @@ Software Used -
 * VS CODE 
 * Git
 
-## Installation
+## Installation :setting:
 -----------------------------------
 
 #### Download or Clone the project
@@ -122,7 +122,7 @@ pip install yagmail
 
 [ **Notice: During the package installization, sometime it shows some error, to avoid those error you can install those packages as admin. ]
 
-## Test Run
+## Test Run :bicyclist:
 -----------------------
 After creating the enviroment and installing the packages, open the IDE terminal/command line to run the program. Using the code below.
 
@@ -133,3 +133,30 @@ Here is a demo to run the program. I'm Using the Pycharm IDE in my demo.
 
 ![Test Run](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/code%20demo_edit_0.gif)
 
+## How To Use? :pencil:
+----------------------
+If you want to use it just follow the steps below.
+
+1. First download or clone the project
+2. Import the project to your favourit IDE
+3. Create an python enviroment
+4. Install all the packages 
+5. Change the mail information
+6. Run the project using the command line or your IDE Run Button
+
+## Known Bugs :bug:
+------------------------------
+This project have some bugs.
+
+* Student Details: In student details folder the **StudentDetails.csv** file don't have ID & name column.This problem show when the program run first time and create the **StudentDetails.csv** file automatically. To soleve the problelm just open the file and add *ID & Name Column* in the file and save it.
+
+* Auto Attachment: This is not a problem actually. The problem is before sent auto mail we have to manually change the file name. I tried to automate the attachment but i faild.
+
+## Contribute :heart:
+If you want to contribute in this project feel free to do that. A [contribution guideline]() will be a big help.
+
+## Credits :relazed:
+Thanks to 
+
+## Licence :scroll:
+MIT © [K.M.H. Mubin](https://github.com/kmhmubin)
