@@ -1,6 +1,6 @@
 # Face Recognition Attandance System
 
-### Recognize The faces And Take Automatic Attandance.
+### Recognize The faces And Take Automatic Attandance. :sparkles:
 
 ![Face Recognition Logo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/Face-Recognition-Attendance-System-Logo.jpg)
 
@@ -159,7 +159,7 @@ If you want to contribute in this project feel free to do that. A [contribution 
 
 ## Credits :sparkling_heart:
 --------------------------------
-Thanks to 
+Thanks to [Farhat Tasnim](https://github.com/farhattasnim) work with me.
 
 ## Licence :scroll:
 ---------------------------------
