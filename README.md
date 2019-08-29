@@ -131,4 +131,5 @@ py main.py
 ```
 Here is a demo to run the program. I'm Using the Pycharm IDE in my demo.
 
-![Test Run]()
+![Test Run](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/code%20demo_edit_0.gif)
+
