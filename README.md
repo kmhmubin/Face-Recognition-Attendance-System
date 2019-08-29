@@ -91,6 +91,7 @@ If your pc don't have virtual enviroment or pip install the follow this link.
 [How to create Virtual Enviroment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) ]
 
 #### Installing the packages
+--------------------------------------------------
 
 After creating the enviroment on your project let's install the necessary packages. 
 
@@ -153,10 +154,13 @@ This project have some bugs.
 * Auto Attachment: This is not a problem actually. The problem is before sent auto mail we have to manually change the file name. I tried to automate the attachment but i faild.
 
 ## Contribute :heart:
+--------------------------------------
 If you want to contribute in this project feel free to do that. A [contribution guideline]() will be a big help.
 
-## Credits :relazed:
+## Credits :sparkling_heart:
+--------------------------------
 Thanks to 
 
 ## Licence :scroll:
+---------------------------------
 MIT © [K.M.H. Mubin](https://github.com/kmhmubin)
