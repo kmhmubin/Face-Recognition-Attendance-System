@@ -4,7 +4,7 @@
 
 ![Face Recognition Logo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/Face-Recognition-Attendance-System-Logo.jpg)
 
-## Motivation
+## Motivation :astonished:
 ----------------------------
 We seek to provide a valuable attendance service for both teachers and students. Reduce manual process errors by provide automated and a reliable attendance system uses face recognition technology.
 
@@ -57,6 +57,7 @@ Software Used -
 * Git
 
 ## Installation
+-----------------------------------
 
 #### Download or Clone the project
 
@@ -91,7 +92,11 @@ If your pc don't have virtual enviroment or pip install the follow this link.
 
 #### Installing the packages
 
-After creating the enviroment on your project let's install the necessary packages. To install those package open the terminal or command line and paste the code from below
+After creating the enviroment on your project let's install the necessary packages. 
+
+![pip isntall demo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/pip%20install_edit_0.gif)
+
+To install those package open the terminal or command line and paste the code from below
 
 ```
 pip install opencv-contrib-python
@@ -116,3 +121,14 @@ pip install yagmail
 ```
 
 [ **Notice: During the package installization, sometime it shows some error, to avoid those error you can install those packages as admin. ]
+
+## Test Run
+-----------------------
+After creating the enviroment and installing the packages, open the IDE terminal/command line to run the program. Using the code below.
+
+```
+py main.py
+```
+Here is a demo to run the program. I'm Using the Pycharm IDE in my demo.
+
+![Test Run]()
