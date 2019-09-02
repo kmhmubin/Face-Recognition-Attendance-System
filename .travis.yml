@@ -6,4 +6,5 @@ install:
   - pip install -r requirements.txt
   - pip install .
 # command to run tests
-script: main
+script: 
+  -./main
