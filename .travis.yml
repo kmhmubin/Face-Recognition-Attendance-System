@@ -6,4 +6,4 @@ cache: pip
 install:
   - pip install -r requirements.txt
 # command to run tests
-script: python main.py
+script: python check_camera.py
