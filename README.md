@@ -5,8 +5,6 @@
 ![Face Recognition Logo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/Face-Recognition-Attendance-System-Logo.jpg)
 
 
-[![Build Status](https://travis-ci.org/kmhmubin/Face-Recognition-Attendance-System.svg?branch=master)](https://travis-ci.org/kmhmubin/Face-Recognition-Attendance-System)
-
 ![GitHub](https://img.shields.io/github/license/kmhmubin/Face-Recognition-Attendance-System)
 
 ## Motivation :astonished:
