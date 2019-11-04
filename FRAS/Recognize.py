@@ -9,10 +9,10 @@ import pandas as pd
 #-------------------------
 def recognize_attendence():
     recognizer = cv2.face.LBPHFaceRecognizer_create()  # cv2.createLBPHFaceRecognizer()
-    recognizer.read("TrainingImageLabel\Trainner.yml")
+    recognizer.read("TrainingImageLabel"+os.sep+"Trainner.yml")
     harcascadePath = "haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(harcascadePath)
-    df = pd.read_csv("StudentDetails\StudentDetails.csv")
+    df = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
     cam = cv2.VideoCapture(0)
     font = cv2.FONT_HERSHEY_SIMPLEX
     col_names = ['Id', 'Name', 'Date', 'Time']
@@ -40,7 +40,7 @@ def recognize_attendence():
                 tt = str(Id)
             if(conf > 75):
                 noOfFile = len(os.listdir("ImagesUnknown"))+1
-                cv2.imwrite("ImagesUnknown\Image"+str(noOfFile) +
+                cv2.imwrite("ImagesUnknown"+os.sep+"Image"+str(noOfFile) +
                             ".jpg", im[y:y+h, x:x+w])
             cv2.putText(im, str(tt), (x, y+h), font, 1, (255, 255, 255), 2)
         attendance = attendance.drop_duplicates(subset=['Id'], keep='first')
@@ -51,7 +51,7 @@ def recognize_attendence():
     date = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
     timeStamp = datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')
     Hour, Minute, Second = timeStamp.split(":")
-    fileName = "Attendance\Attendance_"+date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
+    fileName = "Attendance"+os.sep+"Attendance_"+date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
     attendance.to_csv(fileName, index=False)
     cam.release()
     cv2.destroyAllWindows()

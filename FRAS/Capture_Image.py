@@ -1,6 +1,7 @@
 import csv
 
 import cv2
+import os
 
 
 # counting the numbers
@@ -47,7 +48,7 @@ def takeImages():
                 #incrementing sample number
                 sampleNum = sampleNum+1
                 #saving the captured face in the dataset folder TrainingImage
-                cv2.imwrite("TrainingImage\ "+name + "."+Id + '.' +
+                cv2.imwrite("TrainingImage" + os.sep +name + "."+Id + '.' +
                             str(sampleNum) + ".jpg", gray[y:y+h, x:x+w])
                 #display the frame
                 cv2.imshow('frame', img)
@@ -61,7 +62,7 @@ def takeImages():
         cv2.destroyAllWindows()
         res = "Images Saved for ID : " + Id + " Name : " + name
         row = [Id, name]
-        with open('StudentDetails\StudentDetails.csv', 'a+') as csvFile:
+        with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(row)
         csvFile.close()

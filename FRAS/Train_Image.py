@@ -37,5 +37,5 @@ def TrainImages():
     detector = cv2.CascadeClassifier(harcascadePath)
     faces, Id = getImagesAndLabels("TrainingImage")
     recognizer.train(faces, np.array(Id))
-    recognizer.save("TrainingImageLabel\Trainner.yml")
+    recognizer.save("TrainingImageLabel"+os.sep+"Trainner.yml")
     print("Images Trained")
