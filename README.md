@@ -161,6 +161,8 @@ This project have some bugs.
 --------------------------------------
 If you want to contribute in this project feel free to do that. A [contribution guideline](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Contributing%20Guidelines.md) will be a big help.
 
+Thanks you [Ciroiriarte](https://github.com/ciroiriarte) for contributing.
+
 ## Credits :sparkling_heart:
 --------------------------------
 Thanks to [Farhat Tasnim](https://github.com/farhattasnim) work with me.
