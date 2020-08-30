@@ -13,13 +13,12 @@ def recognize_attendence():
     harcascadePath = "haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(harcascadePath)
     df = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
-    cam = cv2.VideoCapture(0)
     font = cv2.FONT_HERSHEY_SIMPLEX
     col_names = ['Id', 'Name', 'Date', 'Time']
     attendance = pd.DataFrame(columns=col_names)
 
     # Initialize and start realtime video capture
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     cam.set(3, 640)  # set video width
     cam.set(4, 480)  # set video height
     # Define min window size to be recognized as a face
@@ -46,7 +45,7 @@ def recognize_attendence():
                 tt = str(Id)
                 confstr = "  {0}%".format(round(100 - conf))
 
-            if (100-conf) > 68:
+            if (100-conf) > 67:
                 ts = time.time()
                 date = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
                 timeStamp = datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')
@@ -54,7 +53,7 @@ def recognize_attendence():
                 attendance.loc[len(attendance)] = [Id, aa, date, timeStamp]
 
             tt = str(tt)[2:-2]
-            if(100-conf) > 68:
+            if(100-conf) > 67:
                 tt = tt + " [Pass]"
                 cv2.putText(im, str(tt), (x+5,y-5), font, 1, (255, 255, 255), 2)
             else:
@@ -70,7 +69,7 @@ def recognize_attendence():
 
 
         attendance = attendance.drop_duplicates(subset=['Id'], keep='first')
-        cv2.imshow('im', im)
+        cv2.imshow('Attendance', im)
         if (cv2.waitKey(1) == ord('q')):
             break
     ts = time.time()
@@ -79,7 +78,8 @@ def recognize_attendence():
     Hour, Minute, Second = timeStamp.split(":")
     fileName = "Attendance"+os.sep+"Attendance_"+date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
     attendance.to_csv(fileName, index=False)
+    print("Attendance Successful")
     cam.release()
     cv2.destroyAllWindows()
 
-    print("Attendance Successful")
+
