@@ -7,8 +7,6 @@ def camer():
 
     # To capture video from webcam.
     cap = cv2.VideoCapture(0)
-    # To use a video file as input
-    # cap = cv2.VideoCapture('filename.mp4')
 
     while True:
         # Read the frame
