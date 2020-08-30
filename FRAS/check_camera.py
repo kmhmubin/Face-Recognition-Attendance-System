@@ -1,19 +1,37 @@
-import cv2
-
 
 def camer():
-    cap = cv2.VideoCapture(0)
+    import cv2
 
-    while(True):
-        #capture frame-by-frame
-        ret, frame  = cap.read()
-        #operations on the frame come here
-        gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-        #display the resulting frame
-        cv2.imshow('frame', gray)
+    # Load the cascade
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
+    # To capture video from webcam.
+    cap = cv2.VideoCapture(0)
+    # To use a video file as input
+    # cap = cv2.VideoCapture('filename.mp4')
+
+    while True:
+        # Read the frame
+        _, img = cap.read()
+
+        # Convert to grayscale
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # Detect the faces
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5, minSize=(30, 30),flags = cv2.CASCADE_SCALE_IMAGE)
+
+        # Draw the rectangle around each face
+        for (x, y, w, h) in faces:
+            cv2.rectangle(img, (x, y), (x + w, y + h), (10,159,255), 2)
+
+
+        # Display
+        cv2.imshow('Webcam Check', img)
+
+        # Stop if escape key is pressed
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-    # when everything is done
+
+    # Release the VideoCapture object
     cap.release()
     cv2.destroyAllWindows()
-
