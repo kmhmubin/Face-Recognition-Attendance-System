@@ -54,10 +54,10 @@ def mainMenu():
                 print("Thank You")
                 break
             else:
-                print("Invalid Choice. Enter 1-4")
+                print("Invalid Choice. Enter 1-6")
                 mainMenu()
         except ValueError:
-            print("Invalid Choice. Enter 1-4\n Try Again")
+            print("Invalid Choice. Enter 1-6\n Try Again")
     exit
 
 
