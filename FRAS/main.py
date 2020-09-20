@@ -56,7 +56,7 @@ def mainMenu():
                     break
                 else:
                     print("Invalid Choice. Enter 1-6")
-                    time.sleep(100)
+                    time.sleep(1)
                     mainMenu()
             except Exception as e:
                 print("Some Error occurred! - ", str(e))
