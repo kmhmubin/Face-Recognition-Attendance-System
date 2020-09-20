@@ -1,6 +1,6 @@
 # Face Recognition Attandance System
 
-### Recognize The faces And Take Automatic Attandance. :sparkles:
+### Recognize The faces And Take Automatic Attendance. :sparkles:
 
 ![Face Recognition Logo](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Document%20Metarial/Project%20demo%20images/Face-Recognition-Attendance-System-Logo.jpg)
 
@@ -9,7 +9,7 @@
 
 ## Motivation :astonished:
 ----------------------------
-We seek to provide a valuable attendance service for both teachers and students. Reduce manual process errors by provide automated and a reliable attendance system uses face recognition technology.
+We seek to provide a valuable attendance service for both teachers and students. Reduce manual process errors by providing automated and a reliable attendance system which uses face recognition technology.
 
 ## Features :clipboard:
 ---------------------------
@@ -155,7 +155,7 @@ This project have some bugs.
 
 * Student Details: In student details folder the **StudentDetails.csv** file don't have ID & name column.This problem show when the program run first time and create the **StudentDetails.csv** file automatically. To soleve the problelm just open the file and add *ID & Name Column* in the file and save it.
 
-* Auto Attachment: This is not a problem actually. The problem is before sent auto mail we have to manually change the file name. I tried to automate the attachment but i faild.
+* Auto Attachment: This is not a problem actually. The problem is before sent auto mail we have to manually change the file name. I tried to automate the attachment but i failed.
 
 ## Contribute :heart:
 --------------------------------------
