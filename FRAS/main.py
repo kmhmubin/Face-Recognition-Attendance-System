@@ -3,6 +3,7 @@ import check_camera
 import Capture_Image
 import Train_Image
 import Recognize
+import time
 
 
 # creating the title bar function
@@ -33,32 +34,32 @@ def mainMenu():
     while True:
         try:
             choice = int(input("Enter Choice: "))
-
-            if choice == 1:
-                checkCamera()
-                break
-            elif choice == 2:
-                CaptureFaces()
-                break
-            elif choice == 3:
-                Trainimages()
-                break
-            elif choice == 4:
-                RecognizeFaces()
-                break
-            elif choice == 5:
-                os.system("py automail.py")
-                break
-                mainMenu()
-            elif choice == 6:
-                print("Thank You")
-                break
-            else:
-                print("Invalid Choice. Enter 1-6")
-                mainMenu()
         except ValueError:
             print("Invalid Choice. Enter 1-6\n Try Again")
-    exit
+        except Exception as e:
+            print(str(e))
+        else:
+            try:
+                if choice == 1:
+                    checkCamera()
+                elif choice == 2:
+                    CaptureFaces()
+                elif choice == 3:
+                    Trainimages()
+                elif choice == 4:
+                    RecognizeFaces()
+                elif choice == 5:
+                    os.system("py automail.py")
+                    mainMenu()
+                elif choice == 6:
+                    print("Thank You")
+                    break
+                else:
+                    print("Invalid Choice. Enter 1-6")
+                    time.sleep(100)
+                    mainMenu()
+            except Exception as e:
+                print("Some Error occurred! - ", str(e))
 
 
 # ---------------------------------------------------------
@@ -66,7 +67,7 @@ def mainMenu():
 
 def checkCamera():
     check_camera.camer()
-    key = input("Enter any key to return main menu")
+    input("Enter any key to return main menu")
     mainMenu()
 
 
@@ -75,7 +76,7 @@ def checkCamera():
 
 def CaptureFaces():
     Capture_Image.takeImages()
-    key = input("Enter any key to return main menu")
+    input("Enter any key to return main menu")
     mainMenu()
 
 
@@ -84,7 +85,7 @@ def CaptureFaces():
 
 def Trainimages():
     Train_Image.TrainImages()
-    key = input("Enter any key to return main menu")
+    input("Enter any key to return main menu")
     mainMenu()
 
 
@@ -93,7 +94,7 @@ def Trainimages():
 
 def RecognizeFaces():
     Recognize.recognize_attendence()
-    key = input("Enter any key to return main menu")
+    input("Enter any key to return main menu")
     mainMenu()
 
 

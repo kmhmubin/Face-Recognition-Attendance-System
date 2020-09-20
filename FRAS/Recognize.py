@@ -6,7 +6,7 @@ import cv2
 import pandas as pd
 
 
-#-------------------------
+# -------------------------
 def recognize_attendence():
     recognizer = cv2.face.LBPHFaceRecognizer_create()  # cv2.createLBPHFaceRecognizer()
     recognizer.read("TrainingImageLabel"+os.sep+"Trainner.yml")
@@ -32,6 +32,7 @@ def recognize_attendence():
                 timeStamp = datetime.datetime.fromtimestamp(
                     ts).strftime('%H:%M:%S')
                 aa = df.loc[df['Id'] == Id]['Name'].values
+
                 tt = str(Id)+"-"+aa
                 attendance.loc[len(attendance)] = [Id, aa, date, timeStamp]
 
@@ -51,7 +52,8 @@ def recognize_attendence():
     date = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
     timeStamp = datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')
     Hour, Minute, Second = timeStamp.split(":")
-    fileName = "Attendance"+os.sep+"Attendance_"+date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
+    fileName = "Attendance"+os.sep+"Attendance_" + \
+        date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
     attendance.to_csv(fileName, index=False)
     cam.release()
     cv2.destroyAllWindows()

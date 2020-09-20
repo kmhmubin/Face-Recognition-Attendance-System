@@ -25,7 +25,7 @@ def is_number(s):
 
 
 def check_name(name):
-    matches = re.findall(r"^[ .A-Za-z]+$", name)
+    matches = re.findall(r"^[ A-Za-z]+$", name)
     if len(matches) > 0:
         return True
     return False
@@ -99,7 +99,7 @@ def takeImages():
         if(is_number(Id)):
             print("Enter Alphabetical Name")
         elif(not check_name(name)):
-            print("Name can only contain Alphabets, Space or [.]")
+            print("Name can only contain Alphabets and Spaces")
 
         if(name.isalpha()):
             print("Enter Numeric ID")
