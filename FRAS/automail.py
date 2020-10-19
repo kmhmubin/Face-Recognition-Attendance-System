@@ -1,17 +1,21 @@
 import yagmail
 import os
-
-receiver = "mygmail@gmail.com"  # receiver email address
-body = "Attendence File"  # email body
-filename = "Attendance"+os.sep+"Attendance_2019-08-29_13-09-07.csv"  # attach the file
-
+import datetime
+date = datetime.date.today().strftime("%B %d, %Y")
+path = 'Attendance'
+os.chdir(path)
+files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
+newest = files[-1]
+filename = newest
+sub = "Attendance Report for " + str(date)
 # mail information
-yag = yagmail.SMTP("mygmail@gmail.com", "mypassword")
+yag = yagmail.SMTP("youremail@email.com", "password")
 
 # sent the mail
 yag.send(
     to=receiver,
-    subject="Attendance Report",  # email subject
+    subject=sub, # email subject
     contents=body,  # email body
-    attachments=filename,  # file attached
+    attachments= filename  # file attached
 )
+print("Email Sent!")
