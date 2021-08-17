@@ -3,7 +3,7 @@ import csv
 import cv2
 import os
 
-
+import os.path
 # counting the numbers
 
 
@@ -61,11 +61,19 @@ def takeImages():
         cam.release()
         cv2.destroyAllWindows()
         res = "Images Saved for ID : " + Id + " Name : " + name
+        header=["Id", "Name"]
         row = [Id, name]
-        with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
-            writer = csv.writer(csvFile)
-            writer.writerow(row)
-        csvFile.close()
+        if(os.path.isfile("StudentDetails"+os.sep+"StudentDetails.csv")):
+            with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerow(j for j in row)
+            csvFile.close()
+        else:
+            with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerow(i for i in header)
+                writer.writerow(j for j in row)
+            csvFile.close()
     else:
         if(is_number(Id)):
             print("Enter Alphabetical Name")
