@@ -153,15 +153,17 @@ If you want to use it just follow the steps below.
 ------------------------------
 This project have some bugs.
 
-* Student Details: In student details folder the **StudentDetails.csv** file don't have ID & name column.This problem show when the program run first time and create the **StudentDetails.csv** file automatically. To soleve the problelm just open the file and add *ID & Name Column* in the file and save it.
-
+* <strike>Student Details: In student details folder the **StudentDetails.csv** file don't have ID & name column.This problem show when the program run first time and create the <stong>StudentDetails.csv</strong> file automatically. To soleve the problelm just open the file and add *ID & Name Column* in the file and save it.</strike>
 * Auto Attachment: This is not a problem actually. The problem is before sent auto mail we have to manually change the file name. I tried to automate the attachment but i faild.
 
 ## Contribute :heart:
 --------------------------------------
 If you want to contribute in this project feel free to do that. A [contribution guideline](https://github.com/kmhmubin/Face-Recognition-Attendance-System/blob/master/Contributing%20Guidelines.md) will be a big help.
 
-Thanks you [Ciroiriarte](https://github.com/ciroiriarte) for contributing.
+Thanks you, for contributing.
+- [Adeetya Upadhyay](https://github.com/AdeetyaU)
+- [Ciro Iriarte](https://github.com/ciroiriarte)
+- [Shreyas More](https://github.com/staticshreyas)
 
 ## Credits :sparkling_heart:
 --------------------------------
