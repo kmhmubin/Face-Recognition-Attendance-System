@@ -9,7 +9,7 @@ import pandas as pd
 #-------------------------
 def recognize_attendence():
     recognizer = cv2.face.LBPHFaceRecognizer_create()  # cv2.createLBPHFaceRecognizer()
-    recognizer.read("TrainingImageLabel"+os.sep+"Trainner.yml")
+    recognizer.read("./TrainingImageLabel/Trainner.yml")
     harcascadePath = "haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(harcascadePath)
     df = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
@@ -18,7 +18,7 @@ def recognize_attendence():
     attendance = pd.DataFrame(columns=col_names)
 
     # Initialize and start realtime video capture
-    cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    cam = cv2.VideoCapture(0)
     cam.set(3, 640)  # set video width
     cam.set(4, 480)  # set video height
     # Define min window size to be recognized as a face
@@ -26,7 +26,7 @@ def recognize_attendence():
     minH = 0.1 * cam.get(4)
 
     while True:
-        ret, im = cam.read()
+        _,im = cam.read()
         gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
         faces = faceCascade.detectMultiScale(gray, 1.2, 5,minSize = (int(minW), int(minH)),flags = cv2.CASCADE_SCALE_IMAGE)
         for(x, y, w, h) in faces:
