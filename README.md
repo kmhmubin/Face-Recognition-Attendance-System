@@ -42,23 +42,23 @@ Build With -
 Module Used -
 
 All The Module are Latest Version.
-* OpenCV Contrib 4.0.1
-* Pillow
-* Numpy
-* Pandas
-* Shutil
-* CSV
-* yagmail
+* [OpenCV](https://docs.opencv.org/3.4/index.html) (Contrib 4.0.1)
+* [Pillow](https://pypi.org/project/Pillow/)
+* [Numpy](https://numpy.org/)
+* [Pandas](https://pandas.pydata.org/)
+* [Shutil](https://docs.python.org/3/library/shutil.html)
+* [CSV](https://docs.python.org/3/library/csv.html)
+* [yagmail](https://pypi.org/project/yagmail/)
 
 
 Face Recognition Algorithms -
-* Haar Cascade
-* LBPH (Local Binary Pattern Histogram)
+* [Haar Cascade](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
+* [LBPH (Local Binary Pattern Histogram)](https://docs.opencv.org/3.4/da/d60/tutorial_face_main.html)
 
 Software Used -
-* Pycharm 2019.2
-* VS CODE 
-* Git
+* [Pycharm 2019.2](https://www.jetbrains.com/pycharm/download/?section=windows)
+* [VS CODE](https://code.visualstudio.com/download)
+* [Git](https://git-scm.com/downloads)
 
 ## Installation :key:
 -----------------------------------
