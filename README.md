@@ -1,4 +1,5 @@
 # Face Recognition Attandance System
+//Minor documentation changes
 
 ### Recognize The faces And Take Automatic Attandance. :sparkles:
 
@@ -171,4 +172,4 @@ Thanks to [Farhat Tasnim](https://github.com/farhattasnim) work with me.
 
 ## Licence :scroll:
 ---------------------------------
-MIT © [K.M.H. Mubin](https://github.com/kmhmubin)
+Sachin Gautam
