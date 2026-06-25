@@ -72,6 +72,19 @@ def recognize_attendence():
         cv2.imshow('Attendance', im)
         if (cv2.waitKey(1) == ord('q')):
             break
+    cam.release()
+    cv2.destroyAllWindows()
+
+    print("\n--- Lecturer Verification ---")
+    valid_attendance = attendance.copy()
+    for index, row in attendance.iterrows():
+        confirm = input(f"Confirm attendance for {row['Name']} (Id: {row['Id']})? (y/n): ")
+        if confirm.lower() == 'n':
+            valid_attendance.drop(index, inplace=True)
+            print(f"Attendance for {row['Name']} removed.")
+            
+    attendance = valid_attendance
+
     ts = time.time()
     date = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
     timeStamp = datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')
@@ -79,7 +92,4 @@ def recognize_attendence():
     fileName = "Attendance"+os.sep+"Attendance_"+date+"_"+Hour+"-"+Minute+"-"+Second+".csv"
     attendance.to_csv(fileName, index=False)
     print("Attendance Successful")
-    cam.release()
-    cv2.destroyAllWindows()
-
 
